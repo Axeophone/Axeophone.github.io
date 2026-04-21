@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PaceJam Case Study - Ryan Alford</title>
+  <meta content="UX case study for PaceJam, a running experience app designed by Ryan Alford." name="description">
+  <meta content="UX design, case study, PaceJam, running app, Ryan Alford" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400;1,9..40,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Case Study Specific Styles */
+    .case-study-hero {
+      background: linear-gradient(135deg, #2c2c2a 0%, #185fa5 100%);
+      color: #ffffff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .case-study-hero h1 {
+      color: #ffffff;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .case-study-hero .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2rem;
+    }
+
+    .case-study-hero .meta-tags span {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin: 4px;
+    }
+
+    .case-study-nav {
+      background-color: #f1efe8;
+      border-bottom: 2px solid #e0ddd5;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .case-study-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .case-study-nav ul li a {
+      color: #2c2c2a;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 4px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .case-study-nav ul li a:hover {
+      background-color: #185fa5;
+      color: #ffffff;
+    }
+
+    .cs-section {
+      padding: 60px 0;
+    }
+
+    .cs-section:nth-child(even) {
+      background-color: #f1efe8;
+    }
+
+    .cs-section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2c2c2a;
+      border-left: 4px solid #185fa5;
+      padding-left: 16px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cs-section-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #185fa5;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .cs-highlight-box {
+      background-color: #e6f1fb;
+      border-left: 4px solid #185fa5;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 1.5rem 0;
+    }
+
+    .cs-highlight-box p {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #2c2c2a;
+    }
+
+    .cs-quote {
+      background-color: #2c2c2a;
+      color: #f1efe8;
+      border-radius: 8px;
+      padding: 24px 32px;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin: 1.5rem 0;
+    }
+
+    .cs-quote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      color: #185fa5;
+      font-weight: 600;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      height: 100%;
+    }
+
+    .process-step .step-icon {
+      width: 48px;
+      height: 48px;
+      background-color: #185fa5;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .process-step h5 {
+      font-weight: 700;
+      color: #2c2c2a;
+      margin-bottom: 6px;
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+    }
+
+    .placeholder-img {
+      background-color: #e6f1fb;
+      border: 2px dashed #185fa5;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      color: #185fa5;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .outcome-stat {
+      text-align: center;
+      padding: 24px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .outcome-stat .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #185fa5;
+      display: block;
+    }
+
+    .outcome-stat .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .back-to-portfolio {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #185fa5;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      transition: color 0.2s;
+    }
+
+    .back-to-portfolio:hover {
+      color: #2c2c2a;
+    }
+  </style>
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i><span>Projects</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="style-guide.html"><i class="bi bi-palette navicon"></i><span>Style Guide</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Case Study Hero -->
+    <div class="case-study-hero">
+      <div class="container">
+        <a href="index.html#portfolio" class="back-to-portfolio" style="color: rgba(255,255,255,0.7);">
+          <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+        <h1>PaceJam</h1>
+        <p class="subtitle">Capstone UX Design Case Study &mdash; A Running Experience App</p>
+        <div class="meta-tags">
+          <span><i class="bi bi-tag"></i> UX Design</span>
+          <span><i class="bi bi-phone"></i> Mobile App</span>
+          <span><i class="bi bi-people"></i> User Research</span>
+          <span><i class="bi bi-calendar3"></i> [Project Year]</span>
+          <span><i class="bi bi-clock"></i> [Duration]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- In-Page Navigation -->
+    <nav class="case-study-nav d-none d-md-block">
+      <div class="container">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#define">Define</a></li>
+          <li><a href="#ideate">Ideate</a></li>
+          <li><a href="#prototype">Prototype</a></li>
+          <li><a href="#test">Test</a></li>
+          <li><a href="#solution">Solution</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 1. Overview -->
+    <section id="overview" class="cs-section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8" data-aos="fade-up">
+            <p class="cs-section-number">01 &mdash; Overview</p>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p>[Provide a 2–3 sentence executive summary of the project. What is PaceJam? Who is it for? What was your role?]</p>
+            <p>[Continue with any additional context about the project scope, timeline, or constraints. This is your "elevator pitch" for the whole case study.]</p>
+            <div class="cs-highlight-box">
+              <p><strong>My Role:</strong> [e.g., Lead UX Designer &mdash; responsible for end-to-end design from research through final prototype.]</p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Details</h3>
+              <ul>
+                <li><strong>Type</strong> Capstone Project</li>
+                <li><strong>Platform</strong> iOS &amp; Android</li>
+                <li><strong>Tools</strong> Figma, [Other Tools]</li>
+                <li><strong>Duration</strong> [Start] &ndash; [End]</li>
+                <li><strong>Team</strong> [Solo / Team Size]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Problem Statement -->
+    <section id="problem" class="cs-section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12" data-aos="fade-up">
+            <p class="cs-section-number">02 &mdash; Problem</p>
+            <h2 class="cs-section-title">Problem Statement</h2>
+          </div>
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="50">
+            <p>[Describe the core problem your app is solving. Who experiences this problem? When does it happen? Why does it matter?]</p>
+            <p>[Include any relevant context about the running app market, user pain points, or gap you identified.]</p>
+            <div class="cs-quote">
+              "[Insert your problem statement as a clear, user-centered sentence. Example: 'Recreational runners lack a motivating, community-driven way to find routes and playlists that match their pace and mood.']"
+              <cite>&mdash; Problem Statement, PaceJam</cite>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="placeholder-img">
+              <div>
+                <i class="bi bi-image" style="font-size: 2rem; display: block; margin-bottom: 8px;"></i>
+                [Problem Context Visual / Statistic Callout]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Research & Discovery -->
+    <section id="research" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">03 &mdash; Research &amp; Discovery</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Research &amp; Discovery</h2>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+            <h4>Research Methods</h4>
+            <p>[Describe the methods you used: user interviews, surveys, competitive analysis, secondary research, etc.]</p>
+            <ul>
+              <li>[Research method 1 &mdash; e.g., 5 semi-structured user interviews with recreational runners]</li>
+              <li>[Research method 2 &mdash; e.g., Competitive analysis of Strava, Nike Run Club, Runkeeper]</li>
+              <li>[Research method 3 &mdash; e.g., Online survey with X respondents]</li>
+            </ul>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h4>Key Research Findings</h4>
+            <p>[Summarize the major insights uncovered in your research. What surprised you? What confirmed assumptions?]</p>
+            <ul>
+              <li>[Finding 1 &mdash; e.g., Users feel unmotivated running alone without social accountability]</li>
+              <li>[Finding 2 &mdash; e.g., Music and pace are deeply connected to run quality]</li>
+              <li>[Finding 3 &mdash; e.g., Existing apps feel utilitarian, not motivating]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-12">
+            <h4>Competitive Analysis</h4>
+            <p>[Describe your analysis of competing apps/products. What do they do well? Where are the gaps that PaceJam fills?]</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="placeholder-img" style="min-height: 160px;">
+              <div>
+                <i class="bi bi-table" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Competitive Analysis Matrix or Screenshot]
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="placeholder-img" style="min-height: 160px;">
+              <div>
+                <i class="bi bi-bar-chart" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Research Findings Chart or Affinity Map]
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Define -->
+    <section id="define" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">04 &mdash; Define</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Define</h2>
+        <p data-aos="fade-up">[Describe how you synthesized your research to define the core user needs and design direction.]</p>
+
+        <div class="row gy-4 mt-2">
+          <!-- User Persona -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+            <h4>User Persona</h4>
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="placeholder-img" style="min-height: 60px; width: 60px; border-radius: 50%; flex-shrink: 0; padding: 0; min-width: 60px;">
+                    <i class="bi bi-person-circle" style="font-size: 1.8rem; color: #185fa5;"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-0">[Persona Name]</h5>
+                    <small class="text-muted">[Age, Occupation, Location]</small>
+                  </div>
+                </div>
+                <p><strong>Goals:</strong> [What does this user want to achieve with a running app?]</p>
+                <p><strong>Frustrations:</strong> [What are their pain points with current solutions?]</p>
+                <p><strong>Behaviors:</strong> [How often do they run? What devices do they use?]</p>
+                <p class="mb-0"><strong>Quote:</strong> <em>"[A representative quote that captures their mindset.]"</em></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Journey Map -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h4>User Journey Map</h4>
+            <p>[Describe the key stages of your user's journey — from deciding to run, to finishing and sharing results.]</p>
+            <div class="placeholder-img" style="min-height: 200px;">
+              <div>
+                <i class="bi bi-diagram-3" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [User Journey Map Diagram]
+              </div>
+            </div>
+          </div>
+
+          <!-- Point of View / HMW -->
+          <div class="col-12" data-aos="fade-up" data-aos-delay="150">
+            <h4>How Might We Statements</h4>
+            <p>[List 2–3 "How Might We" questions that reframe your user's problems as design opportunities.]</p>
+            <div class="row gy-3">
+              <div class="col-md-4">
+                <div class="cs-highlight-box">
+                  <p><strong>HMW #1:</strong> [e.g., How might we make solo runs feel more social and motivating?]</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="cs-highlight-box">
+                  <p><strong>HMW #2:</strong> [e.g., How might we help runners find the right music for their pace?]</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="cs-highlight-box">
+                  <p><strong>HMW #3:</strong> [e.g., How might we reward consistency without feeling like a chore?]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Ideate -->
+    <section id="ideate" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">05 &mdash; Ideate</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Ideation</h2>
+        <p data-aos="fade-up">[Describe your ideation process. What brainstorming methods did you use? How did you narrow down ideas?]</p>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+            <h4>Brainstorming &amp; Sketching</h4>
+            <p>[Describe your sketching or brainstorming process. How many concepts did you generate? How did you select the direction to pursue?]</p>
+            <div class="placeholder-img">
+              <div>
+                <i class="bi bi-pencil-square" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Sketches / Ideation Board]
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h4>Key Feature Concepts</h4>
+            <p>[Describe the core features or concepts that emerged from ideation.]</p>
+            <ul>
+              <li>[Feature concept 1 &mdash; e.g., Pace-synced music playlist generation]</li>
+              <li>[Feature concept 2 &mdash; e.g., Live social "run buddies" for virtual company]</li>
+              <li>[Feature concept 3 &mdash; e.g., Route recommendation engine based on mood and energy level]</li>
+              <li>[Feature concept 4 &mdash; e.g., Post-run community share with annotated route maps]</li>
+            </ul>
+            <div class="cs-highlight-box">
+              <p><strong>Design Decision:</strong> [Explain why you chose the direction you pursued over alternatives.]</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Prototype -->
+    <section id="prototype" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">06 &mdash; Prototype</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Prototype</h2>
+        <p data-aos="fade-up">[Describe your prototyping process, from low-fidelity wireframes to high-fidelity mockups.]</p>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <h5>Low-Fidelity Wireframes</h5>
+            <p>[Describe the lo-fi wireframes and what they were used to test or communicate.]</p>
+            <div class="placeholder-img">
+              <div>
+                <i class="bi bi-layout-text-window" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Lo-Fi Wireframe Screens]
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <h5>Mid-Fidelity Mockups</h5>
+            <p>[Describe the mid-fi stage and key layout decisions made here.]</p>
+            <div class="placeholder-img">
+              <div>
+                <i class="bi bi-phone" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Mid-Fi Mockup Screens]
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <h5>High-Fidelity Prototype</h5>
+            <p>[Describe the hi-fi prototype and key visual/interaction design choices.]</p>
+            <div class="placeholder-img">
+              <div>
+                <i class="bi bi-phone-fill" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Hi-Fi Prototype Screens]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-12 text-center">
+            <a href="#" class="btn-cta" style="display: inline-flex;">
+              <i class="bi bi-play-circle"></i>&nbsp; View Interactive Prototype
+            </a>
+            <p class="mt-2 text-muted small">[Link your Figma prototype here]</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Test -->
+    <section id="test" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">07 &mdash; Test</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Usability Testing &amp; Iteration</h2>
+        <p data-aos="fade-up">[Describe your usability testing approach. Who did you test with? What tasks did you ask them to complete?]</p>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+            <h4>Testing Methodology</h4>
+            <p>[Describe the testing format: moderated/unmoderated, remote/in-person, number of participants, tasks given.]</p>
+            <ul>
+              <li>[Testing detail 1 &mdash; e.g., Moderated usability tests with 5 participants]</li>
+              <li>[Testing detail 2 &mdash; e.g., Task: "Find a route near you and start a run"]</li>
+              <li>[Testing detail 3 &mdash; e.g., Think-aloud protocol used throughout]</li>
+            </ul>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h4>Key Findings &amp; Iterations</h4>
+            <p>[Summarize what you learned from testing and how the design changed as a result.]</p>
+            <ul>
+              <li>[Finding 1 &mdash; Issue found, then how you iterated]</li>
+              <li>[Finding 2 &mdash; Issue found, then how you iterated]</li>
+              <li>[Finding 3 &mdash; Issue found, then how you iterated]</li>
+            </ul>
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="150">
+            <div class="placeholder-img" style="min-height: 160px;">
+              <div>
+                <i class="bi bi-clipboard-data" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Before/After Screens Showing Key Iterations]
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. Solution / Final Design -->
+    <section id="solution" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">08 &mdash; Solution</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Final Solution</h2>
+        <p data-aos="fade-up">[Describe the final design solution. What does PaceJam do? How does it solve the original problem? Highlight 2–3 key screens or features.]</p>
+
+        <div class="row gy-4 mt-2">
+
+          <!-- Feature 1 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="placeholder-img mb-3">
+              <div>
+                <i class="bi bi-music-note-beamed" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Feature 1 Screenshot]
+              </div>
+            </div>
+            <h5>[Feature 1 Name]</h5>
+            <p>[Describe this feature and how it solves the user problem.]</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="placeholder-img mb-3">
+              <div>
+                <i class="bi bi-map" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Feature 2 Screenshot]
+              </div>
+            </div>
+            <h5>[Feature 2 Name]</h5>
+            <p>[Describe this feature and how it solves the user problem.]</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="placeholder-img mb-3">
+              <div>
+                <i class="bi bi-people" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                [Feature 3 Screenshot]
+              </div>
+            </div>
+            <h5>[Feature 3 Name]</h5>
+            <p>[Describe this feature and how it solves the user problem.]</p>
+          </div>
+
+          <!-- Outcomes / Metrics -->
+          <div class="col-12 mt-2" data-aos="fade-up" data-aos-delay="200">
+            <h4>Outcomes &amp; Impact</h4>
+            <p>[Describe the measurable or qualitative outcomes of your design. What improved from the original state?]</p>
+            <div class="row gy-3 mt-1">
+              <div class="col-md-3 col-6">
+                <div class="outcome-stat">
+                  <span class="stat-number">[X]%</span>
+                  <span class="stat-label">[Metric — e.g., Task completion rate]</span>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="outcome-stat">
+                  <span class="stat-number">[X]</span>
+                  <span class="stat-label">[Metric — e.g., Usability score (SUS)]</span>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="outcome-stat">
+                  <span class="stat-number">[X]%</span>
+                  <span class="stat-label">[Metric — e.g., Reduction in error rate]</span>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="outcome-stat">
+                  <span class="stat-number">[X]/5</span>
+                  <span class="stat-label">[Metric — e.g., Average user satisfaction]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. Reflection -->
+    <section id="reflection" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">09 &mdash; Reflection</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Reflection &amp; Learnings</h2>
+
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-check2-circle"></i></div>
+              <div>
+                <h5>What Worked Well</h5>
+                <p>[Describe what went well in your process, what you're proud of, or decisions that paid off.]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step">
+              <div class="step-icon" style="background-color: #cf2e56;"><i class="bi bi-exclamation-circle"></i></div>
+              <div>
+                <h5>Challenges &amp; Limitations</h5>
+                <p>[Describe any constraints, challenges, or things you would do differently with more time or resources.]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="process-step">
+              <div class="step-icon" style="background-color: #2c2c2a;"><i class="bi bi-arrow-right-circle"></i></div>
+              <div>
+                <h5>Next Steps</h5>
+                <p>[Describe what future iterations or features would look like if you continued developing PaceJam.]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="cs-quote">
+              "[Add a personal closing reflection on this project — what you learned about UX design, the problem space, or yourself as a designer.]"
+              <cite>&mdash; Ryan Alford</cite>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4" data-aos="fade-up">
+          <div class="col-12 text-center">
+            <a href="index.html#portfolio" class="btn-resume-download" style="font-size: 1rem; padding: 10px 24px;">
+              <i class="bi bi-arrow-left"></i> Back to All Projects
+            </a>
+            &nbsp;&nbsp;
+            <a href="index.html#contact" class="btn-cta" style="display: inline-flex;">
+              <i class="bi bi-chat-dots"></i>&nbsp; Let's Talk
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container">
+      <div class="footer-logo mb-3">
+        <img src="assets/img/logo.png" alt="Ryan Alford Logo" height="60">
+      </div>
+      <h3 class="sitename">Ryan Alford</h3>
+      <p>"Reliable by nature, future-focused by trade, always leveling up."</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Ryan Alford</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

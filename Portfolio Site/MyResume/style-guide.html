@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Brand Style Guide - Ryan Alford</title>
+  <meta content="Personal brand style guide for Ryan Alford — colors, typography, logo, and usage guidelines." name="description">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400;1,9..40,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Style Guide Specific Styles */
+    .sg-hero {
+      background: linear-gradient(135deg, #2c2c2a 0%, #185fa5 100%);
+      color: #ffffff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .sg-hero h1 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .sg-hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.1rem;
+    }
+
+    .sg-section {
+      padding: 60px 0;
+      border-bottom: 1px solid #e0ddd5;
+    }
+
+    .sg-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .sg-section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2c2c2a;
+      margin-bottom: 0.5rem;
+    }
+
+    .sg-section-subtitle {
+      color: #888780;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e0ddd5;
+      padding-bottom: 1rem;
+    }
+
+    /* Color Swatches */
+    .color-swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+
+    .color-swatch .swatch-block {
+      height: 100px;
+    }
+
+    .color-swatch .swatch-info {
+      background: #ffffff;
+      padding: 12px;
+      border-top: 1px solid #f0eeea;
+    }
+
+    .color-swatch .swatch-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #2c2c2a;
+      margin-bottom: 2px;
+    }
+
+    .color-swatch .swatch-hex {
+      font-size: 0.8rem;
+      color: #888780;
+      font-family: monospace;
+    }
+
+    .color-swatch .swatch-role {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    /* Typography specimens */
+    .type-specimen {
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 1rem;
+    }
+
+    .type-specimen .type-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #185fa5;
+      margin-bottom: 4px;
+    }
+
+    .type-specimen .type-meta {
+      font-size: 0.78rem;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    .type-h1 { font-size: 2rem; font-weight: 700; color: #2c2c2a; line-height: 1.2; }
+    .type-h2 { font-size: 1.5rem; font-weight: 700; color: #2c2c2a; line-height: 1.3; }
+    .type-h3 { font-size: 1.2rem; font-weight: 500; color: #2c2c2a; line-height: 1.4; }
+    .type-body { font-size: 0.95rem; font-weight: 400; color: #2c2c2a; line-height: 1.7; }
+
+    /* Logo display */
+    .logo-display {
+      padding: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .logo-display.bg-light-brand { background-color: #f1efe8; }
+    .logo-display.bg-dark-brand { background-color: #2c2c2a; }
+    .logo-display.bg-blue-brand { background-color: #185fa5; }
+    .logo-display.bg-white { background-color: #ffffff; border: 1px solid #e0ddd5; }
+
+    .logo-display img { max-height: 100px; }
+
+    .logo-display.bg-dark-brand img,
+    .logo-display.bg-blue-brand img {
+      filter: brightness(0) invert(1);
+    }
+
+    /* Usage dos and don'ts */
+    .usage-card {
+      border-radius: 8px;
+      padding: 20px;
+      height: 100%;
+    }
+
+    .usage-card.do { background-color: #f0f7ee; border-left: 4px solid #3b6d11; }
+    .usage-card.dont { background-color: #fef0f0; border-left: 4px solid #cf2e56; }
+
+    .usage-card .usage-label {
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .usage-card.do .usage-label { color: #3b6d11; }
+    .usage-card.dont .usage-label { color: #cf2e56; }
+
+    /* Voice and tone */
+    .voice-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-align: center;
+      height: 100%;
+    }
+
+    .voice-card .voice-icon {
+      font-size: 2rem;
+      color: #185fa5;
+      margin-bottom: 12px;
+    }
+
+    .voice-card h5 {
+      font-weight: 700;
+      color: #2c2c2a;
+      margin-bottom: 6px;
+    }
+
+    .voice-card p {
+      font-size: 0.875rem;
+      color: #666;
+      margin: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Projects</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="style-guide.html" class="active"><i class="bi bi-palette navicon"></i><span>Style Guide</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero -->
+    <div class="sg-hero">
+      <div class="container">
+        <img src="assets/img/logo.png" alt="Ryan Alford Logo" height="80" style="margin-bottom: 1.5rem; filter: brightness(0) invert(1);">
+        <h1>Personal Brand Style Guide</h1>
+        <p>Ryan Alford &mdash; Cloud Infrastructure &amp; UX Design Professional</p>
+        <p style="font-style: italic; opacity: 0.7;">"Reliable by nature, future-focused by trade, always leveling up."</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+
+      <!-- 1. Brand Overview -->
+      <section class="sg-section">
+        <h2 class="sg-section-title">Brand Overview</h2>
+        <p class="sg-section-subtitle">The foundation and purpose behind the Ryan Alford brand.</p>
+        <div class="row gy-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="voice-card">
+              <div class="voice-icon"><i class="bi bi-bullseye"></i></div>
+              <h5>Mission</h5>
+              <p>To build reliable, user-centered technology systems and design experiences that make complexity feel effortless.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="voice-card">
+              <div class="voice-icon"><i class="bi bi-eye"></i></div>
+              <h5>Vision</h5>
+              <p>To be a trusted technology professional at the intersection of cloud infrastructure and human-centered design.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="voice-card">
+              <div class="voice-icon"><i class="bi bi-gem"></i></div>
+              <h5>Values</h5>
+              <p>Reliability, continuous learning, precision, collaboration, and genuine curiosity about how systems work.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Logo -->
+      <section class="sg-section">
+        <h2 class="sg-section-title">Logo</h2>
+        <p class="sg-section-subtitle">The RA monogram and wordmark. Use consistently across all brand materials.</p>
+
+        <div class="row gy-4">
+          <div class="col-md-3 col-6" data-aos="fade-up">
+            <div class="logo-display bg-white">
+              <img src="assets/img/logo.png" alt="Logo on white">
+            </div>
+            <p class="text-center text-muted small">White / Light Background</p>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="logo-display bg-light-brand">
+              <img src="assets/img/logo.png" alt="Logo on off-white">
+            </div>
+            <p class="text-center text-muted small">White Glove Background</p>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="logo-display bg-dark-brand">
+              <img src="assets/img/logo.png" alt="Logo on dark">
+            </div>
+            <p class="text-center text-muted small">Near Black Background</p>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="logo-display bg-blue-brand">
+              <img src="assets/img/logo.png" alt="Logo on blue">
+            </div>
+            <p class="text-center text-muted small">Professional Blue Background</p>
+          </div>
+        </div>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-md-6" data-aos="fade-up">
+            <div class="usage-card do">
+              <p class="usage-label"><i class="bi bi-check-circle"></i> Do</p>
+              <ul class="mb-0">
+                <li>Use the RA monogram consistently as the primary mark</li>
+                <li>Maintain clear space equal to the height of the "R" on all sides</li>
+                <li>Use Professional Blue (#185FA5) as the accent color on the "A"</li>
+                <li>Use on approved backgrounds (white, off-white, near black)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="usage-card dont">
+              <p class="usage-label"><i class="bi bi-x-circle"></i> Don't</p>
+              <ul class="mb-0">
+                <li>Don't stretch, skew, or distort the logo</li>
+                <li>Don't change the logo colors arbitrarily</li>
+                <li>Don't place on busy backgrounds without sufficient contrast</li>
+                <li>Don't use outdated versions of the mark</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Color Palette -->
+      <section class="sg-section">
+        <h2 class="sg-section-title">Color Palette</h2>
+        <p class="sg-section-subtitle">Clean, trustworthy, and tech-forward — reminiscent of commonly used cloud platforms.</p>
+
+        <div class="row gy-3">
+          <div class="col-lg col-md-4 col-6" data-aos="fade-up">
+            <div class="color-swatch">
+              <div class="swatch-block" style="background-color: #185fa5;"></div>
+              <div class="swatch-info">
+                <p class="swatch-name">Professional Blue</p>
+                <p class="swatch-hex">#185FA5</p>
+                <p class="swatch-role">Primary Accent</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="color-swatch">
+              <div class="swatch-block" style="background-color: #e6f1fb;"></div>
+              <div class="swatch-info">
+                <p class="swatch-name">Blue Tint</p>
+                <p class="swatch-hex">#E6F1FB</p>
+                <p class="swatch-role">Light Accent / Background</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="color-swatch">
+              <div class="swatch-block" style="background-color: #2c2c2a;"></div>
+              <div class="swatch-info">
+                <p class="swatch-name">Near Black</p>
+                <p class="swatch-hex">#2C2C2A</p>
+                <p class="swatch-role">Primary Text / Dark BG</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="color-swatch">
+              <div class="swatch-block" style="background-color: #cf2e56;"></div>
+              <div class="swatch-info">
+                <p class="swatch-name">Sensible Red</p>
+                <p class="swatch-hex">#CF2E56</p>
+                <p class="swatch-role">Secondary Accent / CTA</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="color-swatch">
+              <div class="swatch-block" style="background-color: #f1efe8; border: 1px solid #e0ddd5;"></div>
+              <div class="swatch-info">
+                <p class="swatch-name">White Glove</p>
+                <p class="swatch-hex">#F1EFE8</p>
+                <p class="swatch-role">Warm Off-White / Section BG</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-md-6" data-aos="fade-up">
+            <div class="usage-card do">
+              <p class="usage-label"><i class="bi bi-check-circle"></i> Do</p>
+              <ul class="mb-0">
+                <li>Use Professional Blue as the primary action color (buttons, links)</li>
+                <li>Use Near Black for all primary text and headings</li>
+                <li>Use Sensible Red sparingly for calls-to-action or critical highlights</li>
+                <li>Pair Blue Tint with Near Black text for section backgrounds</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="usage-card dont">
+              <p class="usage-label"><i class="bi bi-x-circle"></i> Don't</p>
+              <ul class="mb-0">
+                <li>Don't use Sensible Red as a background color for large areas</li>
+                <li>Don't use Professional Blue for body text — it reduces readability</li>
+                <li>Don't introduce colors outside this palette without justification</li>
+                <li>Don't place Near Black text on Professional Blue backgrounds</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Typography -->
+      <section class="sg-section">
+        <h2 class="sg-section-title">Typography</h2>
+        <p class="sg-section-subtitle">DM Sans is the primary typeface. Inter is an approved alternative. Limit to 1–2 fonts per layout.</p>
+
+        <div class="row gy-3 mb-4">
+          <div class="col-md-6" data-aos="fade-up">
+            <div class="type-specimen">
+              <p class="type-label">Primary Font</p>
+              <p style="font-size: 2rem; font-weight: 700; color: #2c2c2a; margin: 0;">DM Sans</p>
+              <p class="type-meta">Google Fonts &mdash; Free to use</p>
+              <div class="mt-3">
+                <p style="font-size: 0.9rem; color: #555; line-height: 1.7;">
+                  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                  a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+                  0 1 2 3 4 5 6 7 8 9 ! @ # $ % &amp; ( )
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="type-specimen">
+              <p class="type-label">Alternative Font</p>
+              <p style="font-size: 2rem; font-weight: 700; color: #2c2c2a; font-family: 'Inter', sans-serif; margin: 0;">Inter</p>
+              <p class="type-meta">Google Fonts &mdash; Free to use. Use when DM Sans is unavailable.</p>
+              <div class="mt-3">
+                <p style="font-size: 0.9rem; color: #555; line-height: 1.7; font-family: 'Inter', sans-serif;">
+                  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                  a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+                  0 1 2 3 4 5 6 7 8 9 ! @ # $ % &amp; ( )
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="mb-3" data-aos="fade-up">Type Scale</h4>
+        <div class="row gy-3">
+          <div class="col-12" data-aos="fade-up">
+            <div class="type-specimen">
+              <p class="type-label">H1 &mdash; Page Title</p>
+              <p class="type-h1">Ryan Alford</p>
+              <p class="type-meta">DM Sans / Inter &mdash; 22px (1.375rem) &mdash; Bold (700)</p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="type-specimen">
+              <p class="type-label">H2 &mdash; Section Heading</p>
+              <p class="type-h2">Cloud Infrastructure</p>
+              <p class="type-meta">DM Sans / Inter &mdash; 18px (1.125rem) &mdash; Bold (700)</p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="type-specimen">
+              <p class="type-label">H3 &mdash; Sub-Heading</p>
+              <p class="type-h3">UX Design Professional</p>
+              <p class="type-meta">DM Sans / Inter &mdash; 16px (1rem) &mdash; Medium (500)</p>
+            </div>
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="150">
+            <div class="type-specimen">
+              <p class="type-label">Body &mdash; Paragraph Text</p>
+              <p class="type-body">Ryan Alford is a technology professional at the intersection of cloud infrastructure and operational support. He brings a methodical approach to problem-solving and a collaborative mindset to every team he joins. He thrives in environments where precision matters.</p>
+              <p class="type-meta">DM Sans / Inter &mdash; 14px (0.875rem) &mdash; Regular (400) &mdash; 1.7 line height</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Voice & Tone -->
+      <section class="sg-section">
+        <h2 class="sg-section-title">Voice &amp; Tone</h2>
+        <p class="sg-section-subtitle">How Ryan Alford communicates across platforms and contexts.</p>
+        <div class="row gy-4">
+          <div class="col-md-3 col-6" data-aos="fade-up">
+            <div class="voice-card">
+              <div class="voice-icon"><i class="bi bi-shield-check"></i></div>
+              <h5>Reliable</h5>
+              <p>Confident, clear, and consistent. Delivers on what is promised.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="voice-card">
+              <div class="voice-icon"><i class="bi bi-lightbulb"></i></div>
+              <h5>Curious</h5>
+              <p>Genuinely interested in how systems work and how they can be improved.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="voice-card">
+              <div class="voice-icon"><i class="bi bi-chat-dots"></i></div>
+              <h5>Accessible</h5>
+              <p>Clear communicator. Avoids jargon when possible. Explains the "why."</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="voice-card">
+              <div class="voice-icon"><i class="bi bi-arrow-up-circle"></i></div>
+              <h5>Growth-Oriented</h5>
+              <p>Always learning, always improving. Comfortable acknowledging limits and expanding them.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-md-6" data-aos="fade-up">
+            <div class="usage-card do">
+              <p class="usage-label"><i class="bi bi-check-circle"></i> Write Like This</p>
+              <ul class="mb-0">
+                <li>"I build systems that teams can count on."</li>
+                <li>"Here's what I learned from that failure..."</li>
+                <li>"Let me walk you through the process I used."</li>
+                <li>"I'm still learning X, but here's what I know so far."</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="usage-card dont">
+              <p class="usage-label"><i class="bi bi-x-circle"></i> Avoid This</p>
+              <ul class="mb-0">
+                <li>Buzzword-heavy phrases with no substance</li>
+                <li>Passive voice that avoids accountability</li>
+                <li>Overclaiming expertise in areas still developing</li>
+                <li>Cold, corporate language that feels impersonal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Tagline -->
+      <section class="sg-section">
+        <h2 class="sg-section-title">Tagline</h2>
+        <p class="sg-section-subtitle">The core brand statement used consistently across all materials.</p>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+            <div style="background-color: #2c2c2a; padding: 40px; border-radius: 12px;">
+              <p style="font-size: 1.6rem; font-weight: 700; color: #f1efe8; font-style: italic; margin: 0; line-height: 1.5;">
+                "Reliable by nature, future-focused by trade, always leveling up."
+              </p>
+              <p style="color: #185fa5; margin-top: 16px; font-weight: 600; margin-bottom: 0;">— Ryan Alford</p>
+            </div>
+            <p class="text-muted mt-3 small">Use this tagline on the portfolio hero, resume header, email signature, and LinkedIn summary.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back to Portfolio -->
+      <div class="text-center py-4" data-aos="fade-up">
+        <a href="index.html" class="btn-resume-download" style="font-size: 1rem; padding: 10px 24px;">
+          <i class="bi bi-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container">
+      <div class="footer-logo mb-3">
+        <img src="assets/img/logo.png" alt="Ryan Alford Logo" height="60">
+      </div>
+      <h3 class="sitename">Ryan Alford</h3>
+      <p>"Reliable by nature, future-focused by trade, always leveling up."</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Ryan Alford</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
