@@ -71,9 +71,10 @@
 .hero .hero-tagline {
   font-style: italic;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.92);
   margin-top: 0.5rem;
   margin-bottom: 1.25rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Resume download button */
@@ -120,18 +121,18 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #cf2e56;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #185fa5;
   padding: 10px 28px;
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 700;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-cta:hover {
-  background-color: color-mix(in srgb, #cf2e56, black 15%);
-  color: #ffffff;
+  background-color: #e6f1fb;
+  color: #185fa5;
 }
 
 /* Footer logo */
@@ -692,12 +693,15 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 65% center;
+  transform: scale(1.08);
+  transform-origin: center center;
   z-index: 1;
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: rgba(0, 0, 0, 0.52);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -712,11 +716,13 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero p span {
