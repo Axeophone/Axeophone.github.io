@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>PaceJam Case Study - Ryan Alford</title>
-  <meta content="UX case study for PaceJam, a running experience app designed by Ryan Alford." name="description">
-  <meta content="UX design, case study, PaceJam, running app, Ryan Alford" name="keywords">
+  <meta content="Case study for PaceJam, a native iOS app that dynamically syncs music to a runner's cadence. Ryan Alford served as Lead Developer." name="description">
+  <meta content="iOS development, Swift, case study, PaceJam, running app, Ryan Alford, CoreMotion, Spotify API" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/logo.png" rel="icon">
@@ -28,7 +28,6 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Case Study Specific Styles */
     .case-study-hero {
       background: linear-gradient(135deg, #2c2c2a 0%, #185fa5 100%);
       color: #ffffff;
@@ -189,21 +188,6 @@
       margin: 0;
     }
 
-    .placeholder-img {
-      background-color: #e6f1fb;
-      border: 2px dashed #185fa5;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 200px;
-      color: #185fa5;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-align: center;
-      padding: 20px;
-    }
-
     .outcome-stat {
       text-align: center;
       padding: 24px;
@@ -228,15 +212,64 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #185fa5;
+      color: rgba(255,255,255,0.7);
       font-weight: 600;
       margin-bottom: 1rem;
       transition: color 0.2s;
     }
 
     .back-to-portfolio:hover {
-      color: #2c2c2a;
+      color: #ffffff;
     }
+
+    .tech-tag {
+      display: inline-block;
+      background-color: rgba(255,255,255,0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 3px;
+    }
+
+    .decision-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      height: 100%;
+      border-top: 3px solid #185fa5;
+    }
+
+    .decision-card.rejected {
+      border-top-color: #aaa;
+      opacity: 0.75;
+    }
+
+    .decision-card h5 {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .decision-card p {
+      font-size: 0.88rem;
+      color: #555;
+      margin: 0;
+    }
+
+    .decision-card .verdict {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 10px;
+    }
+
+    .decision-card .verdict.chosen { color: #185fa5; }
+    .decision-card .verdict.rejected-label { color: #aaa; }
   </style>
 
 </head>
@@ -265,17 +298,28 @@
     <!-- Case Study Hero -->
     <div class="case-study-hero">
       <div class="container">
-        <a href="index.html#portfolio" class="back-to-portfolio" style="color: rgba(255,255,255,0.7);">
+        <a href="index.html#portfolio" class="back-to-portfolio">
           <i class="bi bi-arrow-left"></i> Back to Projects
         </a>
         <h1>PaceJam</h1>
-        <p class="subtitle">Capstone UX Design Case Study &mdash; A Running Experience App</p>
-        <div class="meta-tags">
-          <span><i class="bi bi-tag"></i> UX Design</span>
-          <span><i class="bi bi-phone"></i> Mobile App</span>
-          <span><i class="bi bi-people"></i> User Research</span>
-          <span><i class="bi bi-calendar3"></i> [Project Year]</span>
-          <span><i class="bi bi-clock"></i> [Duration]</span>
+        <p class="subtitle">iOS App Development Case Study &mdash; Emerging Media Capstone</p>
+        <div class="meta-tags mb-3">
+          <span><i class="bi bi-phone"></i> iOS Native</span>
+          <span><i class="bi bi-code-slash"></i> Lead Developer</span>
+          <span><i class="bi bi-music-note-beamed"></i> Spotify API</span>
+          <span><i class="bi bi-people"></i> Team of 4</span>
+          <span><i class="bi bi-calendar3"></i> Spring 2026</span>
+        </div>
+        <div>
+          <span class="tech-tag">Swift</span>
+          <span class="tech-tag">SQLite / FMDB</span>
+          <span class="tech-tag">CoreMotion</span>
+          <span class="tech-tag">HealthKit</span>
+          <span class="tech-tag">Spotify SDK</span>
+          <span class="tech-tag">Rapid API</span>
+          <span class="tech-tag">Figma</span>
+          <span class="tech-tag">GitHub</span>
+          <span class="tech-tag">Claude Code</span>
         </div>
       </div>
     </div>
@@ -286,12 +330,11 @@
         <ul>
           <li><a href="#overview">Overview</a></li>
           <li><a href="#problem">Problem</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#define">Define</a></li>
-          <li><a href="#ideate">Ideate</a></li>
-          <li><a href="#prototype">Prototype</a></li>
-          <li><a href="#test">Test</a></li>
           <li><a href="#solution">Solution</a></li>
+          <li><a href="#brand">Brand &amp; Design</a></li>
+          <li><a href="#development">Development</a></li>
+          <li><a href="#testing">Testing</a></li>
+          <li><a href="#results">Results</a></li>
           <li><a href="#reflection">Reflection</a></li>
         </ul>
       </div>
@@ -304,21 +347,22 @@
           <div class="col-lg-8" data-aos="fade-up">
             <p class="cs-section-number">01 &mdash; Overview</p>
             <h2 class="cs-section-title">Project Overview</h2>
-            <p>[Provide a 2–3 sentence executive summary of the project. What is PaceJam? Who is it for? What was your role?]</p>
-            <p>[Continue with any additional context about the project scope, timeline, or constraints. This is your "elevator pitch" for the whole case study.]</p>
+            <p>PaceJam is a native iOS application engineered to dynamically synchronize music with a runner's cadence. The goal was to translate the app's concept into a comprehensive brand identity, build a fully functional iOS app, and validate it through real user testing.</p>
+            <p>The team consisted of four members: I served as Lead Developer alongside two designers (Mel and Kylie) and a drone cinematographer (Chris Gerlach) who contributed to the marketing trailer. My responsibilities spanned system architecture, backend and frontend development, Git workflow management, database design, and shepherding the application from initial sketches to a shipping product.</p>
             <div class="cs-highlight-box">
-              <p><strong>My Role:</strong> [e.g., Lead UX Designer &mdash; responsible for end-to-end design from research through final prototype.]</p>
+              <p><strong>My Role:</strong> Lead Developer &mdash; responsible for system architecture, Spotify API integration, database design and implementation (SQLite/FMDB), version control infrastructure, and overall technical leadership from concept through delivery.</p>
             </div>
           </div>
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Project Details</h3>
               <ul>
-                <li><strong>Type</strong> Capstone Project</li>
-                <li><strong>Platform</strong> iOS &amp; Android</li>
-                <li><strong>Tools</strong> Figma, [Other Tools]</li>
-                <li><strong>Duration</strong> [Start] &ndash; [End]</li>
-                <li><strong>Team</strong> [Solo / Team Size]</li>
+                <li><strong>Type</strong> Emerging Media Capstone</li>
+                <li><strong>Platform</strong> iOS Native (Swift)</li>
+                <li><strong>Tools</strong> Xcode, SQLite, FMDB, CoreMotion, HealthKit, Spotify SDK, Rapid API, Figma, GitHub, Claude Code</li>
+                <li><strong>Duration</strong> Summer 2025 &ndash; Spring 2026</li>
+                <li><strong>Team</strong> 4 members</li>
+                <li><a href="https://projects.nmi.cool/2025/em/pacejam/" target="_blank" class="btn-visit align-self-start">View Live Project Site</a></li>
               </ul>
             </div>
           </div>
@@ -326,370 +370,298 @@
       </div>
     </section>
 
-    <!-- 2. Problem Statement -->
+    <!-- 2. Problem -->
     <section id="problem" class="cs-section">
       <div class="container">
         <div class="row gy-4">
           <div class="col-12" data-aos="fade-up">
             <p class="cs-section-number">02 &mdash; Problem</p>
-            <h2 class="cs-section-title">Problem Statement</h2>
+            <h2 class="cs-section-title">The Problem</h2>
           </div>
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="50">
-            <p>[Describe the core problem your app is solving. Who experiences this problem? When does it happen? Why does it matter?]</p>
-            <p>[Include any relevant context about the running app market, user pain points, or gap you identified.]</p>
+            <p>Runners today have access to great tools in isolation — apps like Strava and Nike Run Club collect performance data, and streaming services like Spotify provide music. But no integrated solution bridges these two domains in a meaningful way.</p>
+            <p>Musical accompaniment significantly influences the running experience: the right tempo can push a runner through a wall, and the wrong one can kill momentum. Yet the intersection between workout data and music selection remained completely unaddressed by the market.</p>
+            <p>The team identified that the real opportunity wasn't a technology problem — it was an <em>integration</em> problem. The gap between running metrics and music enjoyment was the market gap worth filling.</p>
             <div class="cs-quote">
-              "[Insert your problem statement as a clear, user-centered sentence. Example: 'Recreational runners lack a motivating, community-driven way to find routes and playlists that match their pace and mood.']"
-              <cite>&mdash; Problem Statement, PaceJam</cite>
+              "While applications like Strava and Nike Run Club facilitate performance data collection, and streaming services provide music access, no integrated solution existed bridging these domains."
+              <cite>&mdash; PaceJam Case Study</cite>
             </div>
           </div>
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="placeholder-img">
-              <div>
-                <i class="bi bi-image" style="font-size: 2rem; display: block; margin-bottom: 8px;"></i>
-                [Problem Context Visual / Statistic Callout]
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Research & Discovery -->
-    <section id="research" class="cs-section">
-      <div class="container">
-        <p class="cs-section-number" data-aos="fade-up">03 &mdash; Research &amp; Discovery</p>
-        <h2 class="cs-section-title" data-aos="fade-up">Research &amp; Discovery</h2>
-
-        <div class="row gy-4 mb-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
-            <h4>Research Methods</h4>
-            <p>[Describe the methods you used: user interviews, surveys, competitive analysis, secondary research, etc.]</p>
-            <ul>
-              <li>[Research method 1 &mdash; e.g., 5 semi-structured user interviews with recreational runners]</li>
-              <li>[Research method 2 &mdash; e.g., Competitive analysis of Strava, Nike Run Club, Runkeeper]</li>
-              <li>[Research method 3 &mdash; e.g., Online survey with X respondents]</li>
-            </ul>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h4>Key Research Findings</h4>
-            <p>[Summarize the major insights uncovered in your research. What surprised you? What confirmed assumptions?]</p>
-            <ul>
-              <li>[Finding 1 &mdash; e.g., Users feel unmotivated running alone without social accountability]</li>
-              <li>[Finding 2 &mdash; e.g., Music and pace are deeply connected to run quality]</li>
-              <li>[Finding 3 &mdash; e.g., Existing apps feel utilitarian, not motivating]</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row gy-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-12">
-            <h4>Competitive Analysis</h4>
-            <p>[Describe your analysis of competing apps/products. What do they do well? Where are the gaps that PaceJam fills?]</p>
-          </div>
-          <div class="col-lg-6">
-            <div class="placeholder-img" style="min-height: 160px;">
-              <div>
-                <i class="bi bi-table" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Competitive Analysis Matrix or Screenshot]
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="placeholder-img" style="min-height: 160px;">
-              <div>
-                <i class="bi bi-bar-chart" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Research Findings Chart or Affinity Map]
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4. Define -->
-    <section id="define" class="cs-section">
-      <div class="container">
-        <p class="cs-section-number" data-aos="fade-up">04 &mdash; Define</p>
-        <h2 class="cs-section-title" data-aos="fade-up">Define</h2>
-        <p data-aos="fade-up">[Describe how you synthesized your research to define the core user needs and design direction.]</p>
-
-        <div class="row gy-4 mt-2">
-          <!-- User Persona -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
-            <h4>User Persona</h4>
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="placeholder-img" style="min-height: 60px; width: 60px; border-radius: 50%; flex-shrink: 0; padding: 0; min-width: 60px;">
-                    <i class="bi bi-person-circle" style="font-size: 1.8rem; color: #185fa5;"></i>
-                  </div>
-                  <div>
-                    <h5 class="mb-0">[Persona Name]</h5>
-                    <small class="text-muted">[Age, Occupation, Location]</small>
-                  </div>
-                </div>
-                <p><strong>Goals:</strong> [What does this user want to achieve with a running app?]</p>
-                <p><strong>Frustrations:</strong> [What are their pain points with current solutions?]</p>
-                <p><strong>Behaviors:</strong> [How often do they run? What devices do they use?]</p>
-                <p class="mb-0"><strong>Quote:</strong> <em>"[A representative quote that captures their mindset.]"</em></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- User Journey Map -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h4>User Journey Map</h4>
-            <p>[Describe the key stages of your user's journey — from deciding to run, to finishing and sharing results.]</p>
-            <div class="placeholder-img" style="min-height: 200px;">
-              <div>
-                <i class="bi bi-diagram-3" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [User Journey Map Diagram]
-              </div>
-            </div>
-          </div>
-
-          <!-- Point of View / HMW -->
-          <div class="col-12" data-aos="fade-up" data-aos-delay="150">
-            <h4>How Might We Statements</h4>
-            <p>[List 2–3 "How Might We" questions that reframe your user's problems as design opportunities.]</p>
             <div class="row gy-3">
-              <div class="col-md-4">
-                <div class="cs-highlight-box">
-                  <p><strong>HMW #1:</strong> [e.g., How might we make solo runs feel more social and motivating?]</p>
+              <div class="col-12">
+                <div class="outcome-stat">
+                  <span class="stat-number" style="font-size:1.5rem;">Strava</span>
+                  <span class="stat-label">Performance tracking — no music integration</span>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="cs-highlight-box">
-                  <p><strong>HMW #2:</strong> [e.g., How might we help runners find the right music for their pace?]</p>
+              <div class="col-12">
+                <div class="outcome-stat">
+                  <span class="stat-number" style="font-size:1.5rem;">Spotify</span>
+                  <span class="stat-label">Music streaming — no cadence awareness</span>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="cs-highlight-box">
-                  <p><strong>HMW #3:</strong> [e.g., How might we reward consistency without feeling like a chore?]</p>
+              <div class="col-12">
+                <div class="outcome-stat">
+                  <span class="stat-number" style="color: #185fa5; font-size:1.5rem;">PaceJam</span>
+                  <span class="stat-label">The bridge that didn't exist</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 5. Ideate -->
-    <section id="ideate" class="cs-section">
-      <div class="container">
-        <p class="cs-section-number" data-aos="fade-up">05 &mdash; Ideate</p>
-        <h2 class="cs-section-title" data-aos="fade-up">Ideation</h2>
-        <p data-aos="fade-up">[Describe your ideation process. What brainstorming methods did you use? How did you narrow down ideas?]</p>
-
-        <div class="row gy-4 mt-2">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
-            <h4>Brainstorming &amp; Sketching</h4>
-            <p>[Describe your sketching or brainstorming process. How many concepts did you generate? How did you select the direction to pursue?]</p>
-            <div class="placeholder-img">
-              <div>
-                <i class="bi bi-pencil-square" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Sketches / Ideation Board]
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h4>Key Feature Concepts</h4>
-            <p>[Describe the core features or concepts that emerged from ideation.]</p>
-            <ul>
-              <li>[Feature concept 1 &mdash; e.g., Pace-synced music playlist generation]</li>
-              <li>[Feature concept 2 &mdash; e.g., Live social "run buddies" for virtual company]</li>
-              <li>[Feature concept 3 &mdash; e.g., Route recommendation engine based on mood and energy level]</li>
-              <li>[Feature concept 4 &mdash; e.g., Post-run community share with annotated route maps]</li>
-            </ul>
-            <div class="cs-highlight-box">
-              <p><strong>Design Decision:</strong> [Explain why you chose the direction you pursued over alternatives.]</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 6. Prototype -->
-    <section id="prototype" class="cs-section">
-      <div class="container">
-        <p class="cs-section-number" data-aos="fade-up">06 &mdash; Prototype</p>
-        <h2 class="cs-section-title" data-aos="fade-up">Prototype</h2>
-        <p data-aos="fade-up">[Describe your prototyping process, from low-fidelity wireframes to high-fidelity mockups.]</p>
-
-        <div class="row gy-4 mt-2">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
-            <h5>Low-Fidelity Wireframes</h5>
-            <p>[Describe the lo-fi wireframes and what they were used to test or communicate.]</p>
-            <div class="placeholder-img">
-              <div>
-                <i class="bi bi-layout-text-window" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Lo-Fi Wireframe Screens]
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <h5>Mid-Fidelity Mockups</h5>
-            <p>[Describe the mid-fi stage and key layout decisions made here.]</p>
-            <div class="placeholder-img">
-              <div>
-                <i class="bi bi-phone" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Mid-Fi Mockup Screens]
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-            <h5>High-Fidelity Prototype</h5>
-            <p>[Describe the hi-fi prototype and key visual/interaction design choices.]</p>
-            <div class="placeholder-img">
-              <div>
-                <i class="bi bi-phone-fill" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Hi-Fi Prototype Screens]
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-12 text-center">
-            <a href="#" class="btn-cta" style="display: inline-flex;">
-              <i class="bi bi-play-circle"></i>&nbsp; View Interactive Prototype
-            </a>
-            <p class="mt-2 text-muted small">[Link your Figma prototype here]</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 7. Test -->
-    <section id="test" class="cs-section">
-      <div class="container">
-        <p class="cs-section-number" data-aos="fade-up">07 &mdash; Test</p>
-        <h2 class="cs-section-title" data-aos="fade-up">Usability Testing &amp; Iteration</h2>
-        <p data-aos="fade-up">[Describe your usability testing approach. Who did you test with? What tasks did you ask them to complete?]</p>
-
-        <div class="row gy-4 mt-2">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
-            <h4>Testing Methodology</h4>
-            <p>[Describe the testing format: moderated/unmoderated, remote/in-person, number of participants, tasks given.]</p>
-            <ul>
-              <li>[Testing detail 1 &mdash; e.g., Moderated usability tests with 5 participants]</li>
-              <li>[Testing detail 2 &mdash; e.g., Task: "Find a route near you and start a run"]</li>
-              <li>[Testing detail 3 &mdash; e.g., Think-aloud protocol used throughout]</li>
-            </ul>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h4>Key Findings &amp; Iterations</h4>
-            <p>[Summarize what you learned from testing and how the design changed as a result.]</p>
-            <ul>
-              <li>[Finding 1 &mdash; Issue found, then how you iterated]</li>
-              <li>[Finding 2 &mdash; Issue found, then how you iterated]</li>
-              <li>[Finding 3 &mdash; Issue found, then how you iterated]</li>
-            </ul>
-          </div>
-          <div class="col-12" data-aos="fade-up" data-aos-delay="150">
-            <div class="placeholder-img" style="min-height: 160px;">
-              <div>
-                <i class="bi bi-clipboard-data" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Before/After Screens Showing Key Iterations]
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 8. Solution / Final Design -->
+    <!-- 3. Solution -->
     <section id="solution" class="cs-section">
       <div class="container">
-        <p class="cs-section-number" data-aos="fade-up">08 &mdash; Solution</p>
-        <h2 class="cs-section-title" data-aos="fade-up">Final Solution</h2>
-        <p data-aos="fade-up">[Describe the final design solution. What does PaceJam do? How does it solve the original problem? Highlight 2–3 key screens or features.]</p>
+        <p class="cs-section-number" data-aos="fade-up">03 &mdash; Solution</p>
+        <h2 class="cs-section-title" data-aos="fade-up">The Solution</h2>
+        <p data-aos="fade-up">The team resolved several critical early decisions — platform, music source, and pacing direction — before settling on the core architecture. The result was dual-mode functionality designed for two distinct runner mindsets.</p>
 
         <div class="row gy-4 mt-2">
-
-          <!-- Feature 1 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
-            <div class="placeholder-img mb-3">
-              <div>
-                <i class="bi bi-music-note-beamed" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Feature 1 Screenshot]
-              </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="decision-card">
+              <h5><i class="bi bi-arrow-repeat text-primary me-2"></i>Responsive Mode</h5>
+              <p>Music adapts in real time to the runner's current cadence. As you speed up or slow down, PaceJam selects tracks from your Spotify library that match your BPM — keeping the music in sync with your body, not the other way around.</p>
+              <div class="verdict chosen">&#10003; For: Free runners / casual runs</div>
             </div>
-            <h5>[Feature 1 Name]</h5>
-            <p>[Describe this feature and how it solves the user problem.]</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="decision-card">
+              <h5><i class="bi bi-bullseye text-primary me-2"></i>Target Mode</h5>
+              <p>Music sets the pace. The runner chooses a BPM target — or structures a workout with intervals — and PaceJam selects tracks that guide them toward that goal. The music becomes a pacer, not just a soundtrack.</p>
+              <div class="verdict chosen">&#10003; For: Structured training / interval workouts</div>
+            </div>
           </div>
 
-          <!-- Feature 2 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="placeholder-img mb-3">
-              <div>
-                <i class="bi bi-map" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Feature 2 Screenshot]
-              </div>
-            </div>
-            <h5>[Feature 2 Name]</h5>
-            <p>[Describe this feature and how it solves the user problem.]</p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-            <div class="placeholder-img mb-3">
-              <div>
-                <i class="bi bi-people" style="font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                [Feature 3 Screenshot]
-              </div>
-            </div>
-            <h5>[Feature 3 Name]</h5>
-            <p>[Describe this feature and how it solves the user problem.]</p>
-          </div>
-
-          <!-- Outcomes / Metrics -->
-          <div class="col-12 mt-2" data-aos="fade-up" data-aos-delay="200">
-            <h4>Outcomes &amp; Impact</h4>
-            <p>[Describe the measurable or qualitative outcomes of your design. What improved from the original state?]</p>
-            <div class="row gy-3 mt-1">
-              <div class="col-md-3 col-6">
-                <div class="outcome-stat">
-                  <span class="stat-number">[X]%</span>
-                  <span class="stat-label">[Metric — e.g., Task completion rate]</span>
+          <div class="col-12 mt-2" data-aos="fade-up" data-aos-delay="150">
+            <h4 class="mb-3">Key Architecture Decisions</h4>
+            <div class="row gy-3">
+              <div class="col-md-4">
+                <div class="decision-card">
+                  <h5>iOS Native over React Native</h5>
+                  <p>Apple announced "Liquid Glass," a new fluid glass interface system incompatible with React Native. Going native in Swift was necessary to build for modern iOS aesthetics — even though it required learning unfamiliar syntax.</p>
+                  <div class="verdict chosen">&#10003; Chosen: Swift / Native iOS</div>
                 </div>
               </div>
-              <div class="col-md-3 col-6">
-                <div class="outcome-stat">
-                  <span class="stat-number">[X]</span>
-                  <span class="stat-label">[Metric — e.g., Usability score (SUS)]</span>
+              <div class="col-md-4">
+                <div class="decision-card">
+                  <h5>User's Spotify Library</h5>
+                  <p>Instead of a curated music bank, PaceJam integrates directly with the user's own Spotify library. User testing confirmed this was the most valued feature — runners want their music, not ours.</p>
+                  <div class="verdict chosen">&#10003; Chosen: Personal Spotify Library</div>
                 </div>
               </div>
-              <div class="col-md-3 col-6">
-                <div class="outcome-stat">
-                  <span class="stat-number">[X]%</span>
-                  <span class="stat-label">[Metric — e.g., Reduction in error rate]</span>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="outcome-stat">
-                  <span class="stat-number">[X]/5</span>
-                  <span class="stat-label">[Metric — e.g., Average user satisfaction]</span>
+              <div class="col-md-4">
+                <div class="decision-card">
+                  <h5>Local SQLite over Cloud DB</h5>
+                  <p>Initially caching data as JSON files proved limited. When we needed persistent workout history and user data, local SQLite via FMDB was chosen over cloud-hosted MySQL to keep overhead and cost low.</p>
+                  <div class="verdict chosen">&#10003; Chosen: SQLite / FMDB</div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
-    <!-- 9. Reflection -->
+    <!-- 4. Brand & Design -->
+    <section id="brand" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">04 &mdash; Brand &amp; Design</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Brand Identity &amp; UI Design</h2>
+        <p data-aos="fade-up">Designers Mel and Kylie led the brand and visual design work. Their competitive audit of Strava, Nike Run Club, and Spotify revealed a landscape of dark, data-heavy interfaces — an opportunity to do something different.</p>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-palette2"></i></div>
+              <div>
+                <h5>Color &amp; Typography</h5>
+                <p>The team pivoted toward an approachable aesthetic with electric purples and neon greens — colors designed to stimulate energy and mirror the sensation of a great run. Typography: Owners Narrow for headings (bold, impactful, no screen clutter) and Owners for body text (legible at high intensity).</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-emoji-smile"></i></div>
+              <div>
+                <h5>Mascot: Tempo</h5>
+                <p>Early logo discussions produced "Tempo," the app mascot. I sketched the initial concepts; Kylie rendered and refined them in Adobe Illustrator, blending geometric minimalism with cartoon-influenced fluidity. Kylie later animated Tempo in After Effects — looping running sequences demonstrating both app modes during onboarding.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-grid-1x2"></i></div>
+              <div>
+                <h5>Design System</h5>
+                <p>Mel and Kylie built a component library in Figma as the single source of truth. Early prototypes had information density problems — too many data points triggered cognitive overload mid-run. Through iteration, the interface evolved toward a "clean and bold" aesthetic: white space, high-visibility typography, and large touch targets sized for thumb use on the move.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Development -->
+    <section id="development" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">05 &mdash; Development</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Application Development</h2>
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+            <h4>Version Control &amp; Team Workflow</h4>
+            <p>I gave the team a Git crash course and set up our GitHub repository. Git's branching architecture let us run parallel workstreams without stepping on each other: I developed backend logic while Mel and Kylie refined UI components on separate branches — preventing overwrites and keeping the codebase stable throughout.</p>
+
+            <h4 class="mt-4">Spotify API Integration</h4>
+            <p>I registered a Spotify developer application and implemented OAuth 2.0 authentication. Initial setup succeeded — but we quickly discovered that Spotify had deprecated the API endpoint exposing track tempo data roughly one month before we started development. This forced months of searching for alternatives.</p>
+            <ul>
+              <li><strong>ReccoBeats</strong> — Reddit-recommended, completely nonfunctional. Python testing confirmed systematic 400 errors on every request, including verbatim documentation examples.</li>
+              <li><strong>Rapid API</strong> — Nokia's API syndication platform, providing genre, mood, BPM, and Spotify track IDs. Free tier was capped at 3 calls/day. I purchased a $10/month subscription for 5,000+ monthly calls. Within a week, the first functional app build emerged.</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h4>Database Architecture</h4>
+            <p>By January 2026, JSON file caching had hit its limits. The feature roadmap — workout history, data analysis, persistent user data — required a real database. After evaluating options, I chose local SQLite over cloud-hosted MySQL to minimize overhead and cost.</p>
+            <p>The team ran a whiteboard session to map tables, attributes, and relationships. I built the schema in MySQL Workbench, then converted datatypes to SQLite format using DB Browser. The result: PaceJam.DB.</p>
+            <p>Writing database code in Swift was particularly hard — it required knowledge approaching Objective-C. I found <strong>FMDB</strong>, a Cocoa wrapper around SQLite that exposed object-oriented classes for database management. This dramatically accelerated development. Over the following months, I replaced all existing feature logic with database-integrated implementations:</p>
+            <ul>
+              <li>Complete Spotify library caching (songs &amp; playlists)</li>
+              <li>Workout history tracking</li>
+              <li>Persistent login logic</li>
+              <li>Intelligent song selection algorithms</li>
+              <li>CRUD functions for every database table</li>
+            </ul>
+          </div>
+
+          <div class="col-12 mt-2" data-aos="fade-up" data-aos-delay="150">
+            <h4>Claude Code Integration</h4>
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <div class="cs-highlight-box">
+                  <p><strong>What worked:</strong> Claude rapidly read existing codebases and added features efficiently. Styling for features not covered in the Figma prototype came out production-quality on first attempts — largely because the designers had laid such a strong foundational system. Kylie used Claude to implement the UI, feeding it the Figma prototype and specific backend integration instructions to achieve all minimum, target, and reach goals.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="cs-highlight-box" style="border-left-color: #888; background-color: #f5f5f5;">
+                  <p><strong>What didn't:</strong> Claude deleted the <code>.gitignore</code> configuration file. Most feature additions introduced one or two breaking changes through context loss, compiler conflicts, or overwritten logic. Claude occasionally disobeyed explicit instructions — sometimes creating more work than it saved. AI assistance amplifies good foundations, but requires constant oversight.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. User Testing -->
+    <section id="testing" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">06 &mdash; User Testing</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Usability Testing &amp; Iteration</h2>
+        <p data-aos="fade-up">The team conducted moderated usability testing with six Generation Z recreational runners. I facilitated interviews and questioning; Mel handled note-taking and recruitment; Kylie analyzed data and documented findings.</p>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="50">
+            <h4>Results at a Glance</h4>
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="outcome-stat">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Task completion rate on core setup flows</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="outcome-stat">
+                  <span class="stat-number">82.1</span>
+                  <span class="stat-label">System Usability Scale score</span>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="outcome-stat">
+                  <span class="stat-number">#1</span>
+                  <span class="stat-label">Most valued feature: personal Spotify library over stock music</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <h4>Key Iterations from Testing</h4>
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="process-step">
+                  <div class="step-icon" style="font-size:0.9rem; width:36px; height:36px;">1</div>
+                  <div>
+                    <h5>Workflow Restructuring</h5>
+                    <p>Users expected to choose their workout structure <em>before</em> setting pace — not after. We split these into separate sequential screens, aligning the flow with how runners actually think about their workouts.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="process-step">
+                  <div class="step-icon" style="font-size:0.9rem; width:36px; height:36px;">2</div>
+                  <div>
+                    <h5>Terminology Clarification</h5>
+                    <p>"Increase/Decrease" buttons were misread as immediate pace controls. Renaming them to <strong>Negative Splits / Positive Splits</strong> resolved the confusion. "Next Lap" became <strong>Next Interval</strong> to eliminate unintended GPS tracking associations.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="process-step">
+                  <div class="step-icon" style="font-size:0.9rem; width:36px; height:36px;">3</div>
+                  <div>
+                    <h5>Cognitive Load Reduction</h5>
+                    <p>The run screen had too much information competing for attention. We redesigned the visual hierarchy — grouping interval statistics so runners could scan them in milliseconds without disrupting their stride.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Results -->
+    <section id="results" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">07 &mdash; Results</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Results &amp; Next Steps</h2>
+
+        <div class="row gy-4">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="50">
+            <p>The team successfully transformed an ambitious concept into a functional, data-driven iOS application — from a whiteboard idea to a shipped product with real user validation. User research confirmed the core value proposition while surfacing specific improvements that made the app measurably easier to use.</p>
+            <p>The promotional trailer, shot and edited by the team, launched alongside the app at the capstone showcase — bringing the full PaceJam brand to life through video as well as software.</p>
+            <h4 class="mt-4">What's Next</h4>
+            <ul>
+              <li><strong>Real-world field testing</strong> &mdash; Taking PaceJam on live runs to fine-tune the music selection algorithms under actual running conditions, where pace fluctuates unpredictably</li>
+              <li><strong>Algorithm refinement</strong> &mdash; Ensuring music motivation stays consistent across the full arc of a run, not just at setup</li>
+              <li><strong>Expanded mascot integration</strong> &mdash; Bringing Tempo more fully into the run experience, not just onboarding</li>
+            </ul>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="cs-highlight-box">
+              <p><strong>Key Learnings:</strong></p>
+              <ul style="margin:0; padding-left:1.2rem;">
+                <li>Terminology matters as much as functionality — small label changes resolved major user confusion</li>
+                <li>AI-assisted development requires strong human oversight; it amplifies a good foundation but introduces new failure modes</li>
+                <li>API deprecations can derail a project; building flexibility into your data layer early is essential</li>
+                <li>Mascot and brand personality meaningfully reduce onboarding friction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Reflection -->
     <section id="reflection" class="cs-section">
       <div class="container">
-        <p class="cs-section-number" data-aos="fade-up">09 &mdash; Reflection</p>
-        <h2 class="cs-section-title" data-aos="fade-up">Reflection &amp; Learnings</h2>
+        <p class="cs-section-number" data-aos="fade-up">08 &mdash; Reflection</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Reflection</h2>
 
         <div class="row gy-4">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
@@ -697,16 +669,16 @@
               <div class="step-icon"><i class="bi bi-check2-circle"></i></div>
               <div>
                 <h5>What Worked Well</h5>
-                <p>[Describe what went well in your process, what you're proud of, or decisions that paid off.]</p>
+                <p>The Git branching structure kept four people from ever blocking each other. The database whiteboard session upfront saved weeks of rework. And starting with a strong Figma design system made Claude Code integration genuinely useful rather than chaotic.</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="process-step">
-              <div class="step-icon" style="background-color: #cf2e56;"><i class="bi bi-exclamation-circle"></i></div>
+              <div class="step-icon" style="background-color: #888;"><i class="bi bi-exclamation-circle"></i></div>
               <div>
-                <h5>Challenges &amp; Limitations</h5>
-                <p>[Describe any constraints, challenges, or things you would do differently with more time or resources.]</p>
+                <h5>Challenges</h5>
+                <p>Spotify's API deprecation mid-project was the biggest threat to delivery — it cost months of rerouting. Writing database logic in Swift approached Objective-C territory. And managing AI-assisted development required more human review than anticipated.</p>
               </div>
             </div>
           </div>
@@ -714,14 +686,14 @@
             <div class="process-step">
               <div class="step-icon" style="background-color: #2c2c2a;"><i class="bi bi-arrow-right-circle"></i></div>
               <div>
-                <h5>Next Steps</h5>
-                <p>[Describe what future iterations or features would look like if you continued developing PaceJam.]</p>
+                <h5>Next Time</h5>
+                <p>I'd audit third-party API stability before building core architecture around it. I'd also establish AI usage guidelines for the team earlier — clear rules about what Claude should and shouldn't touch would have prevented several regression cycles.</p>
               </div>
             </div>
           </div>
           <div class="col-12" data-aos="fade-up" data-aos-delay="200">
             <div class="cs-quote">
-              "[Add a personal closing reflection on this project — what you learned about UX design, the problem space, or yourself as a designer.]"
+              "The gap between a good idea and a working product is almost entirely composed of problems you didn't know you'd have. PaceJam taught me that the real skill isn't avoiding those problems — it's staying calm, adaptive, and resourceful when they show up."
               <cite>&mdash; Ryan Alford</cite>
             </div>
           </div>
@@ -733,8 +705,8 @@
               <i class="bi bi-arrow-left"></i> Back to All Projects
             </a>
             &nbsp;&nbsp;
-            <a href="index.html#contact" class="btn-cta" style="display: inline-flex;">
-              <i class="bi bi-chat-dots"></i>&nbsp; Let's Talk
+            <a href="portfolio-details.html" class="btn-resume-download" style="font-size: 1rem; padding: 10px 24px;">
+              <i class="bi bi-film"></i> View Trailer Case Study
             </a>
           </div>
         </div>
@@ -750,11 +722,11 @@
         <img src="assets/img/logo.png" alt="Ryan Alford Logo" height="60">
       </div>
       <h3 class="sitename">Ryan Alford</h3>
-      <p>"Reliable by nature, future-focused by trade, always leveling up."</p>
+      <p>Reliable by nature, future-focused by trade, always leveling up.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
-        <a href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+        <a href="https://linkedin.com/in/ryanalford" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Axeophone" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="mailto:ryan01242@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
       </div>
       <div class="container">
         <div class="copyright">

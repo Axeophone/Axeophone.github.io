@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projects - Ryan Alford</title>
-  <meta content="Portfolio project details for Ryan Alford." name="description">
+  <title>PaceJam Trailer - Production Case Study - Ryan Alford</title>
+  <meta content="Production case study for the PaceJam marketing trailer. Ryan Alford directed, shot, and edited the capstone project trailer using DaVinci Resolve, Canon R6 Mk. II, and drone footage." name="description">
+  <meta content="video production, DaVinci Resolve, case study, PaceJam trailer, Ryan Alford, filmmaking" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/logo.png" rel="icon">
@@ -25,6 +26,242 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .case-study-hero {
+      background: linear-gradient(135deg, #1a1a18 0%, #2c2c2a 100%);
+      color: #ffffff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .case-study-hero h1 {
+      color: #ffffff;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .case-study-hero .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2rem;
+    }
+
+    .case-study-hero .meta-tags span {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin: 4px;
+    }
+
+    .case-study-nav {
+      background-color: #f1efe8;
+      border-bottom: 2px solid #e0ddd5;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .case-study-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .case-study-nav ul li a {
+      color: #2c2c2a;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 4px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .case-study-nav ul li a:hover {
+      background-color: #185fa5;
+      color: #ffffff;
+    }
+
+    .cs-section {
+      padding: 60px 0;
+    }
+
+    .cs-section:nth-child(even) {
+      background-color: #f1efe8;
+    }
+
+    .cs-section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2c2c2a;
+      border-left: 4px solid #185fa5;
+      padding-left: 16px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cs-section-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #185fa5;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .cs-highlight-box {
+      background-color: #e6f1fb;
+      border-left: 4px solid #185fa5;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 1.5rem 0;
+    }
+
+    .cs-highlight-box p {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #2c2c2a;
+    }
+
+    .cs-quote {
+      background-color: #2c2c2a;
+      color: #f1efe8;
+      border-radius: 8px;
+      padding: 24px 32px;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin: 1.5rem 0;
+    }
+
+    .cs-quote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      color: #185fa5;
+      font-weight: 600;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      height: 100%;
+    }
+
+    .process-step .step-icon {
+      width: 48px;
+      height: 48px;
+      background-color: #185fa5;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .process-step h5 {
+      font-weight: 700;
+      color: #2c2c2a;
+      margin-bottom: 6px;
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+    }
+
+    .outcome-stat {
+      text-align: center;
+      padding: 24px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .outcome-stat .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #185fa5;
+      display: block;
+    }
+
+    .outcome-stat .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .back-to-portfolio {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      transition: color 0.2s;
+    }
+
+    .back-to-portfolio:hover {
+      color: #ffffff;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      background-color: rgba(255,255,255,0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 3px;
+    }
+
+    .gear-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .gear-card i {
+      font-size: 1.4rem;
+      color: #185fa5;
+      flex-shrink: 0;
+    }
+
+    .gear-card h6 {
+      font-weight: 700;
+      margin: 0 0 2px;
+      font-size: 0.9rem;
+    }
+
+    .gear-card p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: #666;
+    }
+  </style>
 
 </head>
 
@@ -49,132 +286,324 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
+    <!-- Case Study Hero -->
+    <div class="case-study-hero">
       <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Projects</li>
-          </ol>
-        </nav>
-        <h1>Projects</h1>
+        <a href="index.html#portfolio" class="back-to-portfolio">
+          <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+        <h1>PaceJam Trailer</h1>
+        <p class="subtitle">Video Production Case Study &mdash; Emerging Media Capstone</p>
+        <div class="meta-tags mb-3">
+          <span><i class="bi bi-camera-video"></i> Director &amp; Editor</span>
+          <span><i class="bi bi-music-note"></i> Composer</span>
+          <span><i class="bi bi-camera"></i> Cinematographer</span>
+          <span><i class="bi bi-calendar3"></i> Spring 2026</span>
+        </div>
+        <div>
+          <span class="tech-tag">DaVinci Resolve</span>
+          <span class="tech-tag">Canon R6 Mk. II</span>
+          <span class="tech-tag">iPhone 16 Pro</span>
+          <span class="tech-tag">DJI Osmo Gimbal</span>
+          <span class="tech-tag">Drone (Chris Gerlach)</span>
+          <span class="tech-tag">Reaper DAW</span>
+        </div>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Project 1: PaceJam App Development -->
-    <section id="pacejam-app" class="portfolio-details section">
+    <!-- In-Page Navigation -->
+    <nav class="case-study-nav d-none d-md-block">
+      <div class="container">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#preproduction">Pre-Production</a></li>
+          <li><a href="#production">Production</a></li>
+          <li><a href="#postproduction">Post-Production</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+        </ul>
+      </div>
+    </nav>
 
-      <div class="container" data-aos="fade-up">
+    <!-- Trailer Embed -->
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/q8ALE_T_L_Y" title="PaceJam Project Trailer" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="row justify-content-between gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-description">
-              <h2>PaceJam &mdash; iOS App Development</h2>
-              <p>[Describe the PaceJam app here — what it does, your role as lead developer, the tech stack, and anything notable about building it.]</p>
-              <p>[Add more detail about development challenges, solutions, or outcomes.]</p>
+    <!-- 1. Overview -->
+    <section id="overview" class="cs-section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8" data-aos="fade-up">
+            <p class="cs-section-number">01 &mdash; Overview</p>
+            <h2 class="cs-section-title">Project Overview</h2>
+            <p>For the PaceJam capstone launch, the team needed more than a working app — they needed marketing content that could communicate the product's emotional impact and value to an audience who hadn't touched it. I stepped into multiple production roles to make that happen: storyboard artist, director, cinematographer, composer, and editor.</p>
+            <p>The goal was to build a trailer that made someone <em>feel</em> the problem PaceJam solves — the frustration of running without the right music — and then the relief of finding it. Storytelling over feature lists.</p>
+            <div class="cs-highlight-box">
+              <p><strong>My Role:</strong> Director, cinematographer, storyboard artist, editor (DaVinci Resolve), and original score composer (Reaper DAW). I coordinated with drone cinematographer Chris Gerlach for aerial coverage and with teammates Mel and Kylie throughout production.</p>
             </div>
           </div>
-
-          <div class="col-lg-3">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Project Details</h3>
               <ul>
-                <li><strong>Category</strong> iOS App Development</li>
-                <li><strong>Role</strong> Lead Developer</li>
-                <li><strong>Platform</strong> iOS Native</li>
-                <li><strong>Tools</strong> Swift, SwiftUI, Xcode</li>
-                <li><strong>Year</strong> 2025</li>
-                <li><a href="pacejam-case-study.html" class="btn-visit align-self-start">View Case Study</a></li>
+                <li><strong>Type</strong> Marketing Trailer</li>
+                <li><strong>Role</strong> Director / Editor / Composer</li>
+                <li><strong>Edit Software</strong> DaVinci Resolve</li>
+                <li><strong>DAW</strong> Reaper (original score)</li>
+                <li><strong>Duration</strong> Spring 2026</li>
+                <li><strong>Subject</strong> PaceJam iOS App</li>
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- 2. Problem -->
+    <section id="problem" class="cs-section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12" data-aos="fade-up">
+            <p class="cs-section-number">02 &mdash; The Problem</p>
+            <h2 class="cs-section-title">What We Needed to Communicate</h2>
+          </div>
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="50">
+            <p>The capstone presentation required more than a product demo. PaceJam's core concept — music that adapts in real time to your running pace — is intuitive once you experience it, but hard to convey in a slide deck or a static image. We needed something that could:</p>
+            <ul>
+              <li>Establish the problem emotionally, not just analytically</li>
+              <li>Show the app's value without requiring the audience to use it</li>
+              <li>Match the energy and personality of the brand Mel and Kylie had built</li>
+              <li>Work as a standalone piece — shareable, memorable, professional</li>
+            </ul>
+            <div class="cs-quote">
+              "The app concept was strong — music adapting in real time to running speed — but the capstone presentation required more than a working product. The team needed marketing content that conveyed the experience's emotional impact and problem-solving value."
+              <cite>&mdash; PaceJam Trailer Case Study</cite>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="outcome-stat mb-3">
+              <span class="stat-number"><i class="bi bi-film" style="font-size:2rem;"></i></span>
+              <span class="stat-label">Storytelling over feature description</span>
+            </div>
+            <div class="outcome-stat mb-3">
+              <span class="stat-number"><i class="bi bi-heart-pulse" style="font-size:2rem;"></i></span>
+              <span class="stat-label">Emotional resonance over technical specs</span>
+            </div>
+            <div class="outcome-stat">
+              <span class="stat-number"><i class="bi bi-share" style="font-size:2rem;"></i></span>
+              <span class="stat-label">Shareable beyond the classroom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Pre-Production -->
+    <section id="preproduction" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">03 &mdash; Pre-Production</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Pre-Production</h2>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-pencil-square"></i></div>
+              <div>
+                <h5>Storyboarding</h5>
+                <p>Before any camera was picked up, I created a detailed storyboard mapping out narrative structure, shot composition, and emotional pacing — beat by beat. This wasn't just planning for planning's sake. The storyboard prevented wasted production time by ensuring every team member and collaborator knew the creative vision before we arrived on set. It also gave Mel the structure she needed to build a shot list, which drove production coordination.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-play-btn"></i></div>
+              <div>
+                <h5>Beta Trailer: Proof of Concept</h5>
+                <p>Following software development principles, we produced a rough cut using stock footage before committing full production resources. This let us test the narrative structure and pacing, and gave me a low-stakes opportunity to get comfortable with DaVinci Resolve's editing environment. It also helped us identify what the story needed before we went out and shot it — saving the team from discovering problems on set.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Production -->
+    <section id="production" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">04 &mdash; Production</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Production</h2>
+        <p data-aos="fade-up">Mel created a comprehensive shot list from the storyboard, which drove our production coordination. Kylie served as the primary on-camera talent and runner. I handled ground-level cinematography; Chris Gerlach contributed drone coverage for aerial perspectives that added scope to the piece.</p>
+
+        <div class="row gy-4 mt-2">
+
+          <div class="col-12" data-aos="fade-up" data-aos-delay="50">
+            <h4 class="mb-3">Gear</h4>
+            <div class="row gy-3">
+              <div class="col-md-6 col-lg-3">
+                <div class="gear-card">
+                  <i class="bi bi-camera2"></i>
+                  <div>
+                    <h6>Canon R6 Mk. II</h6>
+                    <p>Primary camera body for ground-level cinematic footage</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="gear-card">
+                  <i class="bi bi-phone"></i>
+                  <div>
+                    <h6>iPhone 16 Pro</h6>
+                    <p>Versatile secondary camera for tighter, handheld run footage</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="gear-card">
+                  <i class="bi bi-crosshair"></i>
+                  <div>
+                    <h6>DJI Osmo Gimbal</h6>
+                    <p>Smartphone stabilizer for smooth tracking shots alongside the runner</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="gear-card">
+                  <i class="bi bi-send"></i>
+                  <div>
+                    <h6>Drone (Chris Gerlach)</h6>
+                    <p>Aerial coverage for establishing shots and dynamic overhead angles</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 mt-2" data-aos="fade-up" data-aos-delay="100">
+            <h4>Production Challenge: Color Mismatch</h4>
+            <p>The drone footage returned noticeably desaturated compared to the DSLR material — a common problem when mixing footage from different camera systems with different color science. This created a visual inconsistency that would have been jarring in the final cut and required significant color correction work in post-production to bring both sources into a unified look.</p>
+            <div class="cs-highlight-box">
+              <p><strong>Lesson learned:</strong> When coordinating footage across multiple camera systems, align on color profiles and shooting parameters before production, not after. A brief camera-matching test on location would have reduced post-production work significantly.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Post-Production -->
+    <section id="postproduction" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">05 &mdash; Post-Production</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Post-Production</h2>
+
+        <div class="row gy-4 mt-2">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-sliders"></i></div>
+              <div>
+                <h5>Color Grading</h5>
+                <p>The bulk of the color work addressed the drone/DSLR mismatch. I used DaVinci Resolve's color correction tools to grade both sources toward a unified palette — high-contrast, saturated, and energetic, consistent with PaceJam's electric brand aesthetic. DaVinci's node-based color workflow was new to me, but its precision made matching sources across cameras genuinely achievable.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-type"></i></div>
+              <div>
+                <h5>Motion Tracking &amp; Dynamic Text</h5>
+                <p>I implemented motion tracking and dynamic text placement — techniques I understood conceptually but had never executed under deadline pressure. Working through these in DaVinci Resolve while the clock ran was some of the most effective technical learning I've done. Deadline-driven skill acquisition has a way of making things stick.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="process-step">
+              <div class="step-icon"><i class="bi bi-music-note-list"></i></div>
+              <div>
+                <h5>Original Score Composition</h5>
+                <p>I composed an original score in Reaper DAW using VST instruments and live saxophone, designed to mirror the emotional arc of the trailer — the frustrated runner before discovering PaceJam, and the energy of the resolution. The group ultimately selected stock music instead. It was a collaborative decision I didn't fully agree with, but learning to advocate for creative work and then accept the group's call is part of making media professionally.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Reflection -->
+    <section id="reflection" class="cs-section">
+      <div class="container">
+        <p class="cs-section-number" data-aos="fade-up">06 &mdash; Reflection</p>
+        <h2 class="cs-section-title" data-aos="fade-up">Results &amp; Reflection</h2>
+
+        <div class="row gy-4">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="50">
+            <p>The finished trailer successfully communicated PaceJam's value proposition through storytelling rather than feature description — which was the goal from the start. Audiences understood the problem and the solution without needing to touch the app.</p>
+            <p>The production gave me hands-on experience in areas I'd only approached theoretically: color grading mixed-source footage, motion tracking in DaVinci Resolve, and scoring to picture. Each of those was a new skill acquired under real deadline pressure, which is the most effective kind of learning.</p>
+
+            <div class="cs-quote">
+              "Collaborative media production requires both advocacy and knowing when to accept group decisions. My original score didn't make the final cut — but understanding how to make that call gracefully, and knowing where to push back and where to let go, is a skill in itself."
+              <cite>&mdash; Ryan Alford</cite>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="mb-3">Key Takeaways</h4>
+            <div class="row gy-3">
+              <div class="col-12">
+                <div class="process-step" style="padding: 14px 18px;">
+                  <div class="step-icon" style="width:36px; height:36px; font-size:0.85rem;"><i class="bi bi-check2"></i></div>
+                  <div>
+                    <h5 style="font-size:0.9rem;">Storyboarding prevents wasted production time</h5>
+                    <p>The planning document kept everyone aligned and eliminated surprises on set.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="process-step" style="padding: 14px 18px;">
+                  <div class="step-icon" style="width:36px; height:36px; font-size:0.85rem;"><i class="bi bi-check2"></i></div>
+                  <div>
+                    <h5 style="font-size:0.9rem;">Match camera color profiles before shooting</h5>
+                    <p>Aligning drone and DSLR settings upfront would have saved hours of color work.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="process-step" style="padding: 14px 18px;">
+                  <div class="step-icon" style="width:36px; height:36px; font-size:0.85rem;"><i class="bi bi-check2"></i></div>
+                  <div>
+                    <h5 style="font-size:0.9rem;">Align audio direction early</h5>
+                    <p>Establish music tone with the group before composing — saves creative energy on both sides.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4" data-aos="fade-up">
+          <div class="col-12 text-center">
+            <a href="index.html#portfolio" class="btn-resume-download" style="font-size: 1rem; padding: 10px 24px;">
+              <i class="bi bi-arrow-left"></i> Back to All Projects
+            </a>
+            &nbsp;&nbsp;
+            <a href="pacejam-case-study.html" class="btn-resume-download" style="font-size: 1rem; padding: 10px 24px;">
+              <i class="bi bi-phone"></i> View App Case Study
+            </a>
+          </div>
         </div>
 
       </div>
-
-    </section><!-- /Project 1 -->
-
-    <hr class="my-0" style="border-color: #e0ddd5;">
-
-    <!-- Project 2: Capstone Project Trailer -->
-    <section id="pacejam-trailer" class="portfolio-details section light-background">
-
-      <div class="container" data-aos="fade-up">
-
-        <!-- Video Embed -->
-        <div class="row justify-content-center mb-4">
-          <div class="col-lg-10">
-            <div class="ratio ratio-16x9">
-              <iframe src="https://www.youtube.com/embed/q8ALE_T_L_Y" title="PaceJam Project Trailer" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-between gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-description">
-              <h2>PaceJam &mdash; Capstone Project Trailer</h2>
-              <p>I storyboarded, wrote, shot, and edited the trailer for my Emerging Media Capstone Project. Making use of DaVinci Resolve, drone footage courtesy of Chris Gerlach, footage shot with an iPhone 16 Pro and a Canon R6 Mk. II Digital Camera, and a DJI Osmo Smartphone Gimbal, we crafted a fun, energetic, and engaging trailer to draw in our audience.</p>
-              <p>[Add anything else about the creative process, decisions made, or what you learned from this production.]</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="portfolio-info">
-              <h3>Project Details</h3>
-              <ul>
-                <li><strong>Category</strong> Video Production</li>
-                <li><strong>Role</strong> Director / Editor</li>
-                <li><strong>Tools</strong> DaVinci Resolve, iPhone 16 Pro, Canon R6 Mk. II, DJI Osmo Gimbal</li>
-                <li><strong>Year</strong> 2025</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Project 2 -->
-
-    <hr class="my-0" style="border-color: #e0ddd5;">
-
-    <!-- Project 3: TBD -->
-    <section id="project-3" class="portfolio-details section">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="row justify-content-between gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-description">
-              <h2>[Project Title]</h2>
-              <p>[Describe the project here — what it is, what problem it solves, and what your role was.]</p>
-              <p>[Add any additional context, outcomes, or technical details worth highlighting.]</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="portfolio-info">
-              <h3>Project Details</h3>
-              <ul>
-                <li><strong>Category</strong> [Category]</li>
-                <li><strong>Role</strong> [Your Role]</li>
-                <li><strong>Tools</strong> [Tools Used]</li>
-                <li><strong>Year</strong> [Year]</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Project 3 -->
+    </section>
 
   </main>
 
@@ -184,10 +613,10 @@
         <img src="assets/img/logo.png" alt="Ryan Alford Logo" height="60">
       </div>
       <h3 class="sitename">Ryan Alford</h3>
-      <p>"Reliable by nature, future-focused by trade, always leveling up."</p>
+      <p>Reliable by nature, future-focused by trade, always leveling up.</p>
       <div class="social-links d-flex justify-content-center">
         <a href="https://linkedin.com/in/ryanalford" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/ryanalford" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://github.com/Axeophone" aria-label="GitHub"><i class="bi bi-github"></i></a>
         <a href="mailto:ryan01242@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
       </div>
       <div class="container">
